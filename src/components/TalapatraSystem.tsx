@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './TalapatraSystem.css';
 
 // We assign custom scroll lengths to give the Menu enough space to unfold and scroll
