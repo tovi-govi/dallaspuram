@@ -78,7 +78,7 @@
 }
 .folk-element {
   position: absolute;
-  background-image: url('/src/assets/telugu-elements.jpg');
+  background-image: url('../assets/telugu-elements.jpg');
   background-size: 350%;
   background-repeat: no-repeat;
   mix-blend-mode: multiply;

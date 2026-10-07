@@ -2,6 +2,8 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './SceneTitle.css';
+import bhojanamImg from '../assets/bhojanam.png';
+import heroArtImg from '../assets/hero-art.png';
 
 export default function SceneTitle() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -56,7 +58,7 @@ export default function SceneTitle() {
       {/* The background is the manuscript texture */}
       <div className="st-texture talapatra-texture">
          <div className="st-bg-art">
-           <img src="/src/assets/bhojanam.png" alt="Telugu Bhojanam" className="st-bhojanam-img" />
+           <img src={bhojanamImg} alt="Telugu Bhojanam" className="st-bhojanam-img" />
          </div>
          
          {/* Scattered Folk Elements extracted from the collage */}
@@ -67,7 +69,7 @@ export default function SceneTitle() {
       </div>
 
       <div className="st-content">
-        <img src="/src/assets/hero-art.png" alt="Hero Art" className="st-hero-art" />
+        <img src={heroArtImg} alt="Hero Art" className="st-hero-art" />
         <h1 className="telugu-text st-title-telugu">డల్లాస్‌పురం</h1>
         <p className="st-title-latin">DALLAS PURAM TELUGU KITCHEN</p>
       </div>

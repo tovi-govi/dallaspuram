@@ -11,34 +11,6 @@
   </head>
   <body>
     <div id="root"></div>
-    <div id="error-overlay" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999; background:rgba(0,0,0,0.8); color:red; padding:2rem; font-family:monospace; display:none; white-space:pre-wrap;"></div>
-    <script>
-      window.addEventListener('error', function(e) {
-        document.getElementById('error-overlay').style.display = 'block';
-        document.getElementById('error-overlay').innerText += e.message + '\n' + e.error.stack + '\n\n';
-      });
-      window.addEventListener('unhandledrejection', function(e) {
-        document.getElementById('error-overlay').style.display = 'block';
-        document.getElementById('error-overlay').innerText += e.reason + '\n\n';
-      });
-      const oldError = console.error;
-      console.error = function(...args) {
-        document.getElementById('error-overlay').style.display = 'block';
-        document.getElementById('error-overlay').innerText += args.join(' ') + '\n\n';
-        oldError.apply(console, args);
-      }
-    </script>
     <script type="module" src="/src/main.tsx"></script>
-    <script>
-      setTimeout(() => {
-        const root = document.getElementById('root');
-        if (root && root.innerHTML === '') {
-          document.getElementById('error-overlay').style.display = 'block';
-          document.getElementById('error-overlay').innerText += "ROOT IS EMPTY AFTER 2 SECONDS!\n";
-        } else if (root) {
-          console.error("ROOT HAS CONTENT: " + root.innerHTML.substring(0, 100));
-        }
-      }, 2000);
-    </script>
   </body>
 </html>

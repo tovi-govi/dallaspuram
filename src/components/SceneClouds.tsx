@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import './SceneClouds.css';
+import sunImg from '../assets/sun.png';
 
 export default function SceneClouds() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -68,7 +69,7 @@ export default function SceneClouds() {
           <svg viewBox="0 0 1440 1024" preserveAspectRatio="xMidYMid slice" className="cloud-svg">
             <rect width="1440" height="1024" fill="var(--color-cheriyal-red)" />
             {/* Folk art decorative sun/moon from assets */}
-            <image href="/src/assets/sun.png" x="520" y="200" width="400" height="400" />
+            <image href={sunImg} x="520" y="200" width="400" height="400" />
           </svg>
         </div>
 

@@ -240,7 +240,7 @@
 }
 .t-decor {
   position: absolute;
-  background-image: url('/src/assets/collage-2.png');
+  background-image: url('../assets/collage-2.png');
   background-size: 300%;
   background-repeat: no-repeat;
   mix-blend-mode: multiply;
