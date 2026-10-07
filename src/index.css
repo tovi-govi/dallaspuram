@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+:root {
+  /* Cheriyal & Talapatra inspired palette */
+  --color-manuscript-bg: #E3D1AE;
+  /* Dried palm leaf base */
+  --color-manuscript-ink: #1F1914;
+  /* Lampblack / charcoal text */
+  --color-cheriyal-red: #B52A1C;
+  /* Bold red for accents/backgrounds */
+  --color-cheriyal-blue: #1D4C69;
+  /* Deity blue */
+  --color-cheriyal-yellow: #D79836;
+  /* Warm ochre */
+  --color-forest-green: #37472A;
+
+  --font-telugu: 'Lakki Reddy', 'LakkiReddy', serif;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+
+  --spacing-section: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  background-color: var(--color-manuscript-bg);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-manuscript-ink);
+  line-height: 1.4;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.telugu-text {
+  font-family: var(--font-telugu);
+  line-height: 1;
+}
+
+.manuscript-experience {
+  position: relative;
+  width: 100%;
+}
+
+/* Base utility for absolute full-screen layers */
+.fullscreen-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Typography styles */
+.monumental-title {
+  font-size: clamp(6rem, 15vw, 15rem);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Talapatra Aesthetic */
+.talapatra-texture {
+  /* Simulating the ribbed, horizontal fibrous texture of palm leaves */
+  background-color: var(--color-manuscript-bg);
+  background-image:
+    repeating-linear-gradient(0deg,
+      transparent,
+      transparent 2px,
+      rgba(31, 25, 20, 0.03) 3px,
+      rgba(31, 25, 20, 0.01) 4px);
+  box-shadow:
+    inset 0 0 50px rgba(181, 42, 28, 0.05),
+    0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}

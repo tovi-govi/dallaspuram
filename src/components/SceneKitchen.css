@@ -1,0 +1,112 @@
+.scene-kitchen {
+  padding: 10vh 0;
+  overflow: hidden;
+}
+
+.sk-texture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.03;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  background-size: cover;
+  z-index: 1;
+}
+
+.sk-caption {
+  position: absolute;
+  top: 5vh;
+  right: 5vw;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  z-index: 2;
+}
+
+.sk-visual-group {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+}
+
+.sk-img-wrapper {
+  position: absolute;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(36, 29, 26, 0.15);
+}
+
+.sk-img-1-wrap {
+  width: 55vw;
+  height: 90vh;
+  top: 0;
+  right: 10vw;
+}
+
+.sk-img-1 {
+  transform: scale(1.1);
+}
+
+.sk-img-2-wrap {
+  width: 35vw;
+  height: 60vh;
+  bottom: -10vh;
+  left: 5vw;
+  z-index: 3;
+}
+
+.sk-img-2 {
+  transform: scale(1.15);
+}
+
+.sk-typography-layer {
+  position: absolute;
+  top: 30%;
+  left: -5vw;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.sk-huge-text {
+  text-shadow: 0 10px 40px rgba(239, 233, 223, 0.9);
+}
+
+.sk-story-text {
+  position: absolute;
+  bottom: 5vh;
+  right: 5vw;
+  width: 300px;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  z-index: 5;
+  background-color: var(--color-parchment);
+  padding: 2rem;
+  box-shadow: -10px -10px 40px rgba(239, 233, 223, 0.9);
+}
+
+@media (max-width: 768px) {
+  .sk-img-1-wrap {
+    width: 80vw;
+    height: 60vh;
+    right: 0;
+  }
+  .sk-img-2-wrap {
+    width: 60vw;
+    height: 40vh;
+    bottom: 10vh;
+  }
+  .sk-typography-layer {
+    top: 10%;
+  }
+  .sk-story-text {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin: 20vh auto 0;
+    width: 90vw;
+  }
+}

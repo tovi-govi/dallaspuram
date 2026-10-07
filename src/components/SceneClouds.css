@@ -1,0 +1,36 @@
+.scene-clouds-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 200vh; /* Extra height to allow scrolling through clouds */
+  background-color: var(--color-cheriyal-red);
+  z-index: 10;
+}
+
+.clouds-container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.cloud-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+
+.cloud-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Layering indices */
+.cloud-bg { z-index: 1; }
+.cloud-mg { z-index: 2; }
+.cloud-fg { z-index: 3; pointer-events: none; }
